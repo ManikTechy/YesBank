@@ -9,9 +9,8 @@ if (process.env.NODE_ENV === 'development') {
   const config = require('./webpack.config.dev');
   const compiler = webpack(config);
   app.use(require('webpack-dev-middleware')(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-  }));
+    noInfo: true
+    }));
   app.use(require('webpack-hot-middleware')(compiler));
   app.use(express.static(path.resolve(__dirname, 'src')));
 }

@@ -1,12 +1,16 @@
 {
   "extends": "airbnb",
   "rules": {
+    "import/no-unresolved": [
+      2, 
+      { "caseSensitive": false }
+   ],
     "comma-dangle": 0,
     "import/no-named-as-default": 0,
     "func-names": 0,
     "brace-style": [2, "stroustrup"],
     "max-len": 0,
-    "no-nested-ternary": 0,
+    "no-nested-ternary": [2, {"allowIfAlternate": true}],
     "no-param-reassign": [2, { "props": false }],
     "no-return-assign": 0,
     "no-unused-expressions": 0,

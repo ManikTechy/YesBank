@@ -1,39 +1,41 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import Meta from 'react-helmet';
-import { fetchPostsIfNeeded } from '../../actions';
-import Posts from '../Posts/Posts';
-import Header from '../Header/Header';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import Meta from "react-helmet";
+import { fetchPostsIfNeeded } from "../../actions";
+import Posts from "../../components/Posts/Posts";
+
+import Header from "../../components/Header/Header";
 
 // Import can't be in conditional so use require.
 if (process.env.WEBPACK) {
-  require('./HomePage.css'); // eslint-disable-line global-require
+  require("./HomePage.css"); // eslint-disable-line global-require
 }
 
 export class HomePage extends Component {
   static propTypes = {
     isFetching: PropTypes.bool.isRequired,
     dispatch: PropTypes.func.isRequired,
-    posts: PropTypes.arrayOf(PropTypes.object.isRequired)
-  }
+    posts: PropTypes.arrayOf(PropTypes.object.isRequired),
+  };
   static getMeta() {
     return {
-      title: 'React Redux Boilerplate',
+      title: "Yes Bank",
       link: [
         {
-          rel: 'canonical',
-          href: 'http://localhost:3000'
-        }
+          rel: "canonical",
+          href: "http://localhost:3000",
+        },
       ],
       meta: [
         {
-          charset: 'utf-8'
+          charset: "utf-8",
         },
         {
-          name: 'description', content: 'Put the home page description here!'
-        }
-      ]
+          name: "description",
+          content: "Put the home page description here!",
+        },
+      ],
     };
   }
   componentDidMount() {
@@ -54,23 +56,28 @@ export class HomePage extends Component {
         />
         <Header />
         <h3>Latest Posts</h3>
-        {isEmpty
-          ? (isFetching ? <h3>Loading...</h3> : <h4 className="HomePage-message">Empty :(</h4>)
-          : <div style={{ opacity: isFetching ? 0.5 : 1 }}>
+        {isEmpty ? (
+          isFetching ? (
+            <h3>Loading...</h3>
+          ) : (
+            <h4 className="HomePage-message">Empty :(</h4>
+          )
+        ) : (
+          <div style={{ opacity: isFetching ? 0.5 : 1 }}>
             <Posts posts={posts} />
           </div>
-        }
+        )}
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const { posts = [], isFetching = false, lastUpdated } = state;
   return {
     posts,
     isFetching,
-    lastUpdated
+    lastUpdated,
   };
 };
 

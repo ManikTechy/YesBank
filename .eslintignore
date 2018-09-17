@@ -1,0 +1,6 @@
+dist
+node_modules
+src/*/app/models
+src/shared/flow-typed
+src/jeans/bin/generateJeansFiles/__tests__/testProjects
+src/booking/app/static/lib/tealeaf_DigitalData.js

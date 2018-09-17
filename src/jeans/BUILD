@@ -1,0 +1,9 @@
+jeans_module(
+    name='jeans',
+    sources=rglobs(
+        '.jeans.js',
+        '.eslintrc.js',
+        '*',
+    ),
+    dependencies=['//:jeans-support']
+)

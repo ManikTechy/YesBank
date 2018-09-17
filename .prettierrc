@@ -1,0 +1,23 @@
+{
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babylon",
+        "trailingComma": "es5"
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": "*.gql",
+      "options": {
+        "parser": "graphql"
+      }
+    }
+  ]
+}

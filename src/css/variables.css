@@ -1,5 +1,127 @@
-/* Colors */
-$black: #333;
-$blue: #2a99fe;
-$white: #f1f1f1;
-$gray: #aaa;
+:root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(51, 51, 51, 1);
+  --color-black-transparent: rgba(51, 51, 51, 0.1);
+  --color-black-light: rgb(102, 102, 102, 1);
+  --color-yesbank: #1e518d;
+  --color-yellow: rgba(239, 192, 48, 1);
+  --color-yellow-transparent: rgba(239, 192, 48, 0.1);
+  --color-yellow-text: rgba(243, 205, 88, 1);
+  --color-yellow-middle: rgba(239, 169, 48, 1);
+  --color-yellow-dark: rgba(166, 128, 13, 1);
+  --color-yellow-overlay: rgba(239, 192, 48, 0.7);
+  --color-orange: rgba(253, 154, 0, 1);
+  --color-red-lighter: rgba(250, 112, 81, 1);
+  --color-red-light: rgba(237, 52, 78, 1);
+  --color-red: rgba(237, 52, 78, 1);
+  --color-red-transparent: rgba(237, 52, 78, 0.1);
+  --color-red-dark: rgba(206, 18, 43, 1);
+  --color-green-lime-light: rgba(198, 218, 71, 1);
+  --color-green-lime: rgba(158, 190, 97, 1);
+  --color-green: rgba(82, 178, 102, 1);
+  --color-green-transparent: rgba(82, 178, 102, 0.1);
+  --color-green-dark: rgba(54, 120, 68, 1);
+  --color-money-green: rgba(58, 130, 74, 1);
+  --color-grey: rgba(234, 234, 234, 1);
+  --color-grey-bg: rgba(250, 250, 250, 1);
+  --color-gray-light: rgba(221, 221, 221, 1);
+  --color-grey-middle: rgba(204, 204, 204, 1);
+  --color-grey-middle-transparent: rgba(204, 204, 204, 1);
+  --color-grey-dark: rgba(170, 170, 170, 1);
+  --color-grey-darker: rgba(119, 119, 119, 1);
+  --color-blue-lighter: rgba(77, 198, 255, 1);
+  --color-blue-light: rgba(76, 150, 203, 1);
+  --color-blue: rgba(3, 100, 211, 1);
+  --color-blue-transparent: rgba(3, 100, 211, 0.1);
+  --color-transparent: rgba(0, 0, 0, 0);
+  --color-overlay-black: color(var(--color-black) alpha(80%));
+  --color-overlay-light: color(var(--color-black) alpha(40%));
+  --color-overlay-none: color(var(--color-white) alpha(0%));
+  --color-overlay-white: color(var(--color-white) alpha(80%));
+  --color-overlay-white-light: color(var(--color-white) alpha(70%));
+  --color-facebook: #4267b2;
+  --color-google: #4285f4;
+
+  --linear-color-light-gray: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+  --linear-color-wow: linear-gradient(180deg, #a5399d 0%, #99258d 100%);
+  --linear-color-wow-dark: linear-gradient(180deg, #971c88 0%, #791267 100%);
+  --linear-color-wow-darker: linear-gradient(180deg, #5e1155 0%, #400838 100%);
+  --linear-color-yellow: linear-gradient(180deg, #eccc12 0%, #efc030 100%);
+  --linear-color-black: linear-gradient(180deg, #494848 0%, #333333 100%);
+
+  --font-family: "museo-sans", sans-serif;
+  --font-family-heart: "roboto", sans-serif;
+
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 900;
+
+  --font-size-tiny: 10px;
+  --font-size-smaller: 11px;
+  --font-size-small: 12px;
+  --font-size-smallish: 13px;
+  --font-size: 14px;
+  --font-size-smedium: 15px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+  --font-size-largish: 20px;
+  --font-size-larger: 22px;
+  --font-size-huge: 24px;
+  --font-size-truly-huge: 30px;
+  --font-size-really-huge: 36px;
+  --font-size-gigantish: 48px;
+  --font-size-gigantic: 50px;
+
+  --transition-time-200: 200ms;
+  --transition-time-300: 300ms;
+  --transition-time-400: 400ms;
+  --transition-time-500: 500ms;
+
+  --box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.16);
+  --box-shadow-lift: 0 2px 20px -1px rgba(0, 0, 0, 0.2);
+
+  --border-radius: 2px;
+
+  --z-index-1: 100;
+  --z-index-2: 200;
+  --z-index-3: 300;
+  --z-index-4: 400;
+  --z-index-5: 500;
+  --z-index-6: 600;
+  --z-index-7: 700;
+  --z-index-8: 800;
+  --z-index-9: 900;
+
+  --z-index-toast: 1000;
+
+  --text-shadow: rgba(0, 0, 0, 0.7) 3px 3px 0;
+
+  --max-width: 1140px;
+
+  --service-component-height: 466px;
+  --service-component-max-width: 559px;
+
+  --icon-size: 24px;
+  --huge-icon-size: 70px;
+
+  --seat-margins: 6px;
+
+  --slide-in-margin-top: 75px;
+
+  --line-height-extra: 1.42857143;
+}
+
+@custom-media --full-width (max-width: 1140px);
+@custom-media --wide (max-width: 1070px);
+@custom-media --narrow (max-width: 900px);
+@custom-media --tablet (max-width: 700px);
+@custom-media --tablet-narrow (max-width: 580px);
+@custom-media --mobile-wide (max-width: 570px);
+@custom-media --mobile (max-width: 480px);
+@custom-media --mobile-small (max-width: 320px);
+@custom-media --small-landscape (max-height: 320px);
+@custom-media --narrow-height (max-height: 650px);
+@custom-media --mobile-height (max-height: 568px);
