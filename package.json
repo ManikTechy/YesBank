@@ -5,7 +5,6 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "node ./src/jeans/tasks/taskRunner.js -c lint",
-    "prepush": "npm run test",
     "test": "babel-node node_modules/.bin/_mocha --require ./test/index.js -c src/**/*.test.js",
     "browser": "cross-env NODE_ENV=development babel-node ./server.js",
     "build": "webpack --config ./webpack.config.prod.js",
