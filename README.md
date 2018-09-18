@@ -15,8 +15,8 @@ yarn
 
 **Prerequesties to be used before pushing branch:** 
 
-yarn fmt(format all Modified and New files)
-yarn lint(Linting all Modified and New files)
+`yarn fmt`(format all Modified and New files)
+`yarn lint`(Linting all Modified and New files)
 
 
 To build the dev environment with hot reloading of JS and CSS, type:
