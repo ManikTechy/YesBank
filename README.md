@@ -1,15 +1,15 @@
-# React Redux Boilerplate
+# Yes Bank
 This is meant as a starter for React projects using tools, patterns and practices that represent the current state of the art in JavaScript development. In those areas where this project fails to achieve that standard, contributions are most welcome!
 
 **Note:** Node v6+ is required for this project.
 
-We recommend using [yarn](https://code.facebook.com/posts/1840075619545360) to manage dependencies. To begin using yarn, install globally with `npm install -g yarn`.
+ To begin using yarn, install globally with `npm install -g yarn`.
 
 Then simply clone the repository and install using the `yarn` command.
 
 ```
-git clone git@github.com:Lullabot/React-Redux-Boilerplate.git
-cd React-Redux-Boilerplate
+git clone https://github.com/ManikTechy/YesBank.git
+cd YesBank
 yarn
 ```
 
@@ -37,9 +37,9 @@ The intention is to provide a basic, but comprehensive, skeleton for React proje
 - webpack (bundling assets)
 - PostCSS (processing of CSS)
 - Stylelint and eslint (modified AirBnB)
-- Mocha and Chai (testing)
+- Mocha and Chai (testing). ##Later add Jest
 - Babel (latest JS)
-- husky (run tasks using git hooks like commit, pre-push)
+- husky (run tasks using git hooks like commit, pre-push) ##add later
 
 All of these are currently mainstream tools for building modern JavaScript applications, however, it may be useful to discuss the rationale for the inclusion of some of these tools.
 
@@ -53,18 +53,6 @@ If you really don't like PostCSS and want Sass, it's very easy to swap out PostC
 
 ## Other Things that May Come Up
 There may also be questions about some things which are either missing (no task runners) or perhaps structured/configured in an unfamiliar way.
-
-#### No Gulp or Grunt
-This project uses npm scripts to run the few tasks needed to build and serve the app. The scripts are located in `package.json`. If you need to add some task to these scripts, look for documentation on either the CLI or Node API for the tool you are considering.
-
-#### File structure
-The file structure for this project uses a modular pattern that is common in JavaScript projects, but may be unfamiliar to some developers. Under `src/components`, find the `HomePage` directory.
-
-The file structure there is the pattern used through this project. All of the JS and CSS pertaining to that particular component are grouped together in a single place. This has proven to be a very helpful way of organizing a React/JS project.
-
-If you are worried about "separation of concerns", please see MPJ's [humorous rant](https://www.youtube.com/watch?v=0ZNIQOO2sfA) on the topic.
-
-Another quick note, the components designated as "pages" - HomePage, PostPage - are [container components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components).
 
 #### husky
 Note that linting is performed on each commit and tests are run on pre-push. These tasks are courtesy of [husky](https://www.npmjs.com/package/husky). For reference, the husky tasks are in the `scripts` section of `package.json`.
@@ -81,5 +69,4 @@ Other methods of building and loading CSS have proved slower/clunkier than webpa
 #### Imports of CSS Variables
 If the CSS file you are working in uses variables or mixins, it will have to import those files before they can be used. Webpack does not yet support global variables. This is true for Sass, Less and PostCSS.
 
-## Credits
-The biggest influence on this project is the Redux documentation. Redux is the rare library that is not only an outstanding work of code, but is accompanied by clear and thorough documentation. Reading the [Redux documentation](http://redux.js.org/) will help you understand most of the code in this project.
+#### Have used differnt constants for colors
