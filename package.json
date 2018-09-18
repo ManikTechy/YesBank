@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "yesbank",
   "version": "0.0.1",
   "description": "Yes Bank",
   "main": "src/index.js",
@@ -77,7 +77,6 @@
     "webpack-hot-middleware": "2.12.2"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/Lullabot/React-Redux-Boilerplate"
-  }
+    "type": "git"
+    }
 }
