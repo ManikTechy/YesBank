@@ -4,11 +4,10 @@
   "description": "Yes Bank",
   "main": "src/index.js",
   "scripts": {
+    "start": "yarn fmt && cross-env NODE_ENV=development babel-node ./server.js",
     "lint": "node ./src/jeans/tasks/taskRunner.js -c lint",
     "test": "babel-node node_modules/.bin/_mocha --require ./test/index.js -c src/**/*.test.js",
-    "browser": "cross-env NODE_ENV=development babel-node ./server.js",
     "build": "webpack --config ./webpack.config.prod.js",
-    "server": "npm run build && cross-env NODE_ENV=production babel-node ./server.js",
     "fmt": "node ./src/jeans/tasks/taskRunner.js -c fmt"
   },
   "author": "John Hannah",
