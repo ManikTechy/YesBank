@@ -4,13 +4,13 @@
   "description": "Yes Bank",
   "main": "src/index.js",
   "scripts": {
-    "start": "yarn fmt && npm install yarn && cross-env NODE_ENV=development babel-node ./server.js",
+    "start": "yarn fmt && cross-env NODE_ENV=development babel-node ./server.js",
     "lint": "node ./src/jeans/tasks/taskRunner.js -c lint",
     "test": "babel-node node_modules/.bin/_mocha --require ./test/index.js -c src/**/*.test.js",
     "build": "webpack --config ./webpack.config.prod.js",
     "fmt": "node ./src/jeans/tasks/taskRunner.js -c fmt"
   },
-  "author": "John Hannah",
+  "author": "Xebia",
   "license": "MIT",
   "dependencies": {
     "axios": "0.15.1",
