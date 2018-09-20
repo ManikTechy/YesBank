@@ -7,6 +7,8 @@ import Posts from "../../components/Posts/Posts";
 
 import Header from "../../components/Header/Header";
 
+import LazyLoad from "../../components/LazyImages";
+
 // Import can't be in conditional so use require.
 if (process.env.WEBPACK) {
   require("./HomePage.css"); // eslint-disable-line global-require
