@@ -11,6 +11,7 @@ const csswring = require('csswring');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: path.resolve(__dirname, 'src'),
   output: {
@@ -20,6 +21,12 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['public/*']),
+    new HtmlWebpackPlugin({
+      title: 'Custom template',
+      // Load a custom template (lodash by default see the FAQ for details)
+      template: 'src/index.html'
+    })
+,  
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
