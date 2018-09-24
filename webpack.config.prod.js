@@ -11,7 +11,6 @@ const csswring = require('csswring');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
 module.exports = {
   entry: path.resolve(__dirname, 'src'),
   output: {
