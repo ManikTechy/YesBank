@@ -1,0 +1,92 @@
+[
+  {
+    "date": "2017-02-01T00:00:00",
+    "new": 454,
+    "inProgress": 52,
+    "complete": 229
+  },
+  {
+    "date": "2017-03-02T00:00:00",
+    "new": 304,
+    "inProgress": 4,
+    "complete": 183
+  },
+  {
+    "date": "2017-04-02T00:00:00",
+    "new": 102,
+    "inProgress": 5,
+    "complete": 284
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 321,
+    "inProgress": 492,
+    "complete": 385
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 485,
+    "inProgress": 228,
+    "complete": 345
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 169,
+    "inProgress": 84,
+    "complete": 443
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 42,
+    "inProgress": 281,
+    "complete": 391
+  },
+  {
+    "date": "2017-05-02T00:00:00",
+    "new": 321,
+    "inProgress": 492,
+    "complete": 385
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 485,
+    "inProgress": 228,
+    "complete": 345
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 169,
+    "inProgress": 84,
+    "complete": 443
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 42,
+    "inProgress": 281,
+    "complete": 391
+  },
+  {
+    "date": "2017-05-02T00:00:00",
+    "new": 321,
+    "inProgress": 492,
+    "complete": 385
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 485,
+    "inProgress": 228,
+    "complete": 345
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 169,
+    "inProgress": 84,
+    "complete": 443
+  },
+  {
+    "date": "2017-02-02T00:00:00",
+    "new": 42,
+    "inProgress": 281,
+    "complete": 391
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "request": {
+      "url": "^/api/login?$",
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "latency": 600,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/authenticate.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/summary?$",
+      "method": "GET",
+      "query": {
+        "status": "New"
+      }
+    },
+    "response": {
+      "status": 200,
+      "latency": 1000,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/request-summary.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/summary?$",
+      "method": "GET",
+      "query": {
+        "status": "InProgress"
+      }
+    },
+    "response": {
+      "status": 200,
+      "latency": 1000,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/request-summary.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/bookmarked?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 1000,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/request/bookmarked-requests.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/stats?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/test.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/linebar?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "query": {
+        "duration": "LastSixMonths"
+      },
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/line-chart.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/piechart?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/pie-chart-category.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/search/basic?$",
+      "method": "GET",
+      "query": {
+        "query": "mix"
+      }
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/basic-search-mixed.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/search/basic?$",
+      "method": "GET",
+      "query": {
+        "query": "req"
+      }
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/basic-search-requests.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/search/basic?$",
+      "method": "GET",
+      "query": {
+        "query": "per"
+      }
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/basic-search-persons.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/search/advanced?$",
+      "method": "POST"
+    },
+    "response": {
+      "status": 200,
+      "latency": 3000,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/search/request-search.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/lookup/types?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/lookup/types.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/lookup/cities?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/lookup/cities.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/lookup/priorities?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/lookup/priorities.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/lookup/statuses?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/lookup/statuses.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/lookup/teammembers",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/lookup/team-members.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/bookmark/(\\d+)$",
+      "method": "POST"
+    },
+    "response": {
+      "status": 204,
+      "latency": 800
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/bookmark/(\\d+)$",
+      "method": "DELETE"
+    },
+    "response": {
+      "status": 204,
+      "latency": 800
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/alerts",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/header-alerts.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/request/myrequests",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/request/my-requests.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/stack",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/techstack/technology.json"
+    }
+  },
+  {
+    "request": {
+      "url": "^/api/techStack?$",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "latency": 800,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "stubs/data/techstack/tech-stack.json"
+    }
+  }
+]

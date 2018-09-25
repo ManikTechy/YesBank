@@ -1,0 +1,76 @@
+{
+  "techStack": [
+    {
+      "id": 11,
+      "tech": "Java",
+      "associatedTech": [
+        {
+          "id": 23,
+          "tech": "Core Java"
+        },
+        {
+          "id": 24,
+          "tech": "tomcat"
+        },
+        {
+          "id": 24,
+          "tech": "Android"
+        },
+        {
+          "id": 24,
+          "tech": "Java"
+        },
+        {
+          "id": 24,
+          "tech": "C#"
+        },
+        {
+          "id": 24,
+          "tech": "Xamarin"
+        },
+        {
+          "id": 24,
+          "tech": "React"
+        },
+        {
+          "id": 24,
+          "tech": "reacttest"
+        },
+        {
+          "id": 24,
+          "tech": "react-redux"
+        },
+        {
+          "id": 24,
+          "tech": "Scala"
+        },
+        {
+          "id": 24,
+          "tech": "javascript"
+        },
+        {
+          "id": 24,
+          "tech": "gulp"
+        },
+        {
+          "id": 24,
+          "tech": "grunt"
+        }
+      ],
+      "RefernceLinks": [
+        {
+          "url": "www.google.com",
+          "notes": "Learn core java"
+        },
+        {
+          "url": "www.linkiedin.com",
+          "notes": "Learn core java"
+        },
+        {
+          "url": "www.facebook.com",
+          "notes": "Learn core java"
+        }
+      ]
+    }
+  ]
+}

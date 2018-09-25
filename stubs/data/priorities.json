@@ -1,0 +1,13 @@
+[{
+  "code": 1,
+  "name": "VVIP"
+}, {
+  "code": 2,
+  "name": "VIP"
+}, {
+  "code": 3,
+  "name": "Normal"
+}, {
+  "code": 4,
+  "name": "Low"
+}]
