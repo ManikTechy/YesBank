@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import Meta from "react-helmet";
 import { fetchPostsIfNeeded } from "../../actions";
 import Posts from "../../components/Posts/Posts";
-
+import InputText from "../../components/InputText/InputText";
+import Input from "../../components/InputText/input";
 import Header from "../../components/Header/Header";
 
 import LazyLoad from "../../components/LazyImages";
@@ -15,6 +16,12 @@ if (process.env.WEBPACK) {
 }
 
 export class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      initialValue: "",
+    };
+  }
   static propTypes = {
     isFetching: PropTypes.bool.isRequired,
     dispatch: PropTypes.func.isRequired,
@@ -44,12 +51,32 @@ export class HomePage extends Component {
     const { dispatch } = this.props;
     dispatch(fetchPostsIfNeeded());
   }
+
+  callback(inputValue) {
+    this.setState({ initialValue: inputValue });
+  }
+
   render() {
     const { posts, isFetching } = this.props;
     const isEmpty = posts.length === 0;
     const head = HomePage.getMeta();
     return (
       <div className="HomePage">
+        {/* Below is the example to use input text, password, email */}
+        <div>
+          <Input
+            label="Username"
+            type="text"
+            callback={e => this.callback(e)}
+            value={this.state.initialValue}
+          />
+          <Input
+            label="Password"
+            type="password"
+            callback={e => this.callback(e)}
+          />
+        </div>
+
         <Meta
           title={head.title}
           description={head.description}
@@ -62,13 +89,13 @@ export class HomePage extends Component {
           isFetching ? (
             <h3>Loading...</h3>
           ) : (
-            <h4 className="HomePage-message">Empty :(</h4>
-          )
+              <h4 className="HomePage-message">Empty :(</h4>
+            )
         ) : (
-          <div style={{ opacity: isFetching ? 0.5 : 1 }}>
-            <Posts posts={posts} />
-          </div>
-        )}
+            <div style={{ opacity: isFetching ? 0.5 : 1 }}>
+              <Posts posts={posts} />
+            </div>
+          )}
       </div>
     );
   }
