@@ -1,8 +1,7 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
 
 if (process.env.WEBPACK) {
-  require("./InputText.css"); // eslint-disable-line global-require
+  require("./Input.css"); // eslint-disable-line global-require
 }
 class Input extends React.Component {
   constructor(props) {
@@ -14,12 +13,18 @@ class Input extends React.Component {
   }
   render() {
     return (
-      <TextField
-        onChange={event => this.handleChange(event)}
-        label={this.props.label}
-        type={this.props.type}
-        value={this.props.value}
-      />
+      <div className="input-group">
+        <input
+          className="input-element"
+          type={this.props.type}
+          required
+          value={this.props.value}
+          onChange={e => this.handleChange(e)}
+        />
+        <span className="input-highlight" />
+        <span className="input-bar" />
+        <label className="input-label">{this.props.label}</label>
+      </div>
     );
   }
 }
