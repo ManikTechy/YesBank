@@ -91,3 +91,8 @@ Other methods of building and loading CSS have proved slower/clunkier than webpa
 If the CSS file you are working in uses variables or mixins, it will have to import those files before they can be used. Webpack does not yet support global variables. This is true for Sass, Less and PostCSS.
 
 #### Have used differnt constants for colors
+
+#### Have used Stubby for mocking APIs
+This has to be removed after development
+1. Open another terminal at project path 
+2. `gulp stub`
