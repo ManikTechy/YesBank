@@ -23,17 +23,30 @@ yarn
 
 To build the dev environment with hot reloading of JS and CSS, type:
 
-`npm run browser`
+`yarn start`
 
 To build for production w/ server rendering, type:
 
-`npm run server`
+`yarn build`
 
 By default, the site is available at http://localhost:3000
 
 If you would like to contribute to this project, fork the repo and submit pull requests. JavaScript code should use the latest JS syntax (ES6 and/or ES7). React components that don't need access to either state or React lifecycle methods should be written as [stateless functional components](https://egghead.io/lessons/react-building-stateless-function-components-new-in-react-0-14).
 
 If you are suggesting a major overhaul of some aspect of this project, please submit an issue with your idea and allow some discussion before commencing work.
+
+## To build and Run Docker Image for the app
+
+the first step is to build an image using the dockerfile inculded in this app. the file is quite simple to understand. first it takes and alpine image on top of which it adds nginx and copies public folder of this app to `/usr/share/ngix/html/` folder. the the last command is to expose port 80 of the container and switch off daemon of nginx.
+
+the production ready image file can run by following these setps
+
+1. `docker build -t <name-of-docker-image-as-you-want>`.  //the last dot gives the current directory
+
+for example you created docker image name as "react" pass it to the second step.
+
+2. `docker run -d -p <port-of-host>:80 --name <name-of-docker-container-as-you-want> <name-of-docker-image-as-you-want>`
+
 
 ## Tools Included in this Project
 
