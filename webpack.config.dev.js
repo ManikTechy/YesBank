@@ -9,6 +9,9 @@ const postcssMqPacker = require('css-mqpacker');
 const autoprefixer = require('autoprefixer');
 const csswring = require('csswring');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const postcssColorFunction = require("postcss-color-function");
+const postcssCustomMedia = require("postcss-custom-media");
+
 
 module.exports = {
   entry: [
@@ -32,6 +35,61 @@ module.exports = {
     })
   ],
   module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "classnames-loader",
+          },
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [
+                postcssImport({
+                  path: [path.resolve(process.cwd(), "src")],
+                }),
+                postcssColorFunction,
+                postcssCustomMedia,
+                autoprefixer({
+                  browsers: ["last 2 versions", "> 1%", "IE >= 9"],
+                }),
+              ],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.story\.js?$/,
+        enforce: "pre",
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "react-svg-loader",
+            options: {
+              svgo: {
+                plugins: [
+                  {
+                    removeAttrs: { attrs: "xmlns.*" },
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
     loaders: [
       {
         test: /\.js$/,
