@@ -128,11 +128,6 @@ const shouldDependencyBeIncluded = (dependency, fileName) => {
       const serviceFolder = fileName
         .split(`${process.cwd()}/`)[1]
         .split("/")
-        // This is a hack to be able to set the relativePathDepth
-        // in tests. The default value of 5 stands for
-        // src/js/src/booking/app/ === 5*/
-        // For the tests we need
-        // src/js/src/jeans/bin/generateJeansFiles/__tests__/testProjects/relativePaths/ == 9
         .slice(0, config.relativePathDepth || 5)
         .join("/");
 
@@ -191,7 +186,7 @@ const shouldDependencyBeIncluded = (dependency, fileName) => {
       .join("/");
   }
   if (isFromShared) {
-    const jeansDepedencyPath = `src/js/src/${dependencyWithOutRelativePath}`;
+    const jeansDepedencyPath = `src/${dependencyWithOutRelativePath}`;
     const filePath = path.join(process.cwd(), jeansDepedencyPath);
     try {
       const stat = fs.statSync(`${filePath}.js`);

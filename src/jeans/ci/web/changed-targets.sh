@@ -12,4 +12,4 @@ function get_changed_parent_commit() {
 }
 
 export NODE_PATH=/usr/lib/node_modules
-exec node ./src/js/src/jeans/ci/web/getChangedTargets.js "$(get_changed_parent_commit)" > changed-targets
+exec node ./src/jeans/ci/web/getChangedTargets.js "$(get_changed_parent_commit)" > changed-targets

@@ -25,7 +25,7 @@ changedTargets(
     services.forEach(service => {
       const { task } = args;
       const runProc = exec(
-        `node ./src/js/src/jeans/tasks/taskRunner.js -c ${task} -s ${service}`,
+        `node ./src/jeans/tasks/taskRunner.js -c ${task} -s ${service}`,
         err => {
           if (err) {
             console.log(err); // eslint-disable-line

@@ -13,4 +13,4 @@ function get_changed_parent_commit() {
 
 export NODE_PATH=/usr/lib/node_modules
 
-exec node ./src/js/src/jeans/ci/web/runTaskForChanged.js -t test -c $(get_changed_parent_commit)
+exec node ./src/jeans/ci/web/runTaskForChanged.js -t test -c $(get_changed_parent_commit)

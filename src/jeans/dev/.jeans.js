@@ -1,3 +1,3 @@
 module.exports = {
-  packages: ["minimist", "nodemon", "src/js/src/jeans/bin"]
+  packages: ["minimist", "nodemon", "src/jeans/bin"]
 };
