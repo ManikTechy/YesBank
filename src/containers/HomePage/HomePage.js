@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Meta from "react-helmet";
-import { fetchPostsIfNeeded } from "../../actions";
-import Posts from "../../components/Posts/Posts";
+import { fetchPostsIfNeeded } from "actions";
+import Posts from "components/Posts/Posts";
 
-import Header from "../../components/Header/Header";
+import Header from "components/Header/Header";
 
-import LazyLoad from "../../components/LazyImages";
+import LazyLoad from "components/LazyImages";
 
 // Import can't be in conditional so use require.
 if (process.env.WEBPACK) {

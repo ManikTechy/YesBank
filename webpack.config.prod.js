@@ -19,6 +19,9 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  resolve: {
+    modulesDirectories: ['src','public', 'components', 'node_modules']
+  },
   plugins: [
     new CleanWebpackPlugin(['public/*']),
     new HtmlWebpackPlugin({

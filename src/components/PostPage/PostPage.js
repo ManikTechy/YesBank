@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import Meta from "react-helmet";
 import { find } from "lodash";
 import Header from "../Header/Header";
-import { fetchPostsIfNeeded } from "../../actions";
+import { fetchPostsIfNeeded } from "actions";
 // Import can't be in conditional so use require.
 if (process.env.WEBPACK) {
   require("./PostPage.css"); // eslint-disable-line global-require
