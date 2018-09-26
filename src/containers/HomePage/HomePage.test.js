@@ -3,7 +3,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { expect } from "chai";
 import { HomePage } from "./HomePage";
-import mockProps from "../../lib/mockProps";
+import mockProps from "lib/mockProps";
 
 // Make a setup() helper that passes props and renders the component with shallow rendering
 function setup() {

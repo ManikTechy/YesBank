@@ -34,6 +34,9 @@ module.exports = {
       }
     })
   ],
+  resolve: {
+    modulesDirectories: ['src','public', 'components', 'node_modules']
+  },
   module: {
     rules: [
       {
