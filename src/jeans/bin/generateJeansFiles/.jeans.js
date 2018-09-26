@@ -4,8 +4,8 @@ module.exports = {
     "flow-parser",
     "minimist",
     "prettier",
-    "src/js/src/jeans/bin",
-    "src/js/src/jeans/bin/generateJeansFiles",
-    "src/js/src/jeans/utils"
+    "src/jeans/bin",
+    "src/jeans/bin/generateJeansFiles",
+    "src/jeans/utils"
   ]
 };

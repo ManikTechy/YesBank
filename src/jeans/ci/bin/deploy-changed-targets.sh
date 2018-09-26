@@ -12,7 +12,7 @@ function get_changed_parent_commit() {
 
 ENVIRONMENT=$1
 export NODE_PATH=/usr/lib/node_modules
-node ./src/js/src/jeans/ci/web/getChangedTargets.js "$(get_changed_parent_commit)" --deployableOnly > changed-targets
+node ./src/jeans/ci/web/getChangedTargets.js "$(get_changed_parent_commit)" --deployableOnly > changed-targets
 (
   while read -r l
   do
