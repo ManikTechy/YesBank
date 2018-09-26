@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Meta from "react-helmet";
 import { fetchPostsIfNeeded } from "actions";
 import Posts from "components/Posts/Posts";
-
+import Input from "components/InputText/input";
 import Header from "components/Header/Header";
 
 import LazyLoad from "components/LazyImages";
@@ -15,6 +15,9 @@ if (process.env.WEBPACK) {
 }
 
 export class HomePage extends Component {
+  constructor(props) {
+    super(props);
+  }
   static propTypes = {
     isFetching: PropTypes.bool.isRequired,
     dispatch: PropTypes.func.isRequired,
@@ -44,12 +47,30 @@ export class HomePage extends Component {
     const { dispatch } = this.props;
     dispatch(fetchPostsIfNeeded());
   }
+
+  callback(inputValue) {
+    this.setState({ initialValue: inputValue });
+  }
+
   render() {
     const { posts, isFetching } = this.props;
     const isEmpty = posts.length === 0;
     const head = HomePage.getMeta();
     return (
       <div className="HomePage">
+        <div>
+          <Input
+            label="Username"
+            type="text"
+            callback={e => this.callback(e)}
+          />
+          <Input
+            label="Password"
+            type="password"
+            callback={e => this.callback(e)}
+          />
+        </div>
+
         <Meta
           title={head.title}
           description={head.description}
