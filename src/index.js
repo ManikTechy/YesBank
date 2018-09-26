@@ -1,12 +1,13 @@
-import React from "react";
-import { render } from "react-dom";
-import { createStore, applyMiddleware, compose } from "redux";
-import { Provider } from "react-redux";
-import { Router, browserHistory } from "react-router";
-import thunk from "redux-thunk";
-import createLogger from "redux-logger";
-import posts from "./reducers";
-import routes from "./routes";
+import React from 'react';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import thunk from 'redux-thunk';
+import createLogger from 'redux-logger';
+import posts from './reducers';
+import routes from './routes';
+import registerServiceWorker from './registerServiceWorker';
 
 // This allows us to use Redux dev tools.
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line
@@ -37,3 +38,5 @@ if (process.env.NODE_ENV === "development" && module.hot) {
     store.replaceReducer(require("./reducers").default); // eslint-disable-line global-require
   });
 }
+
+registerServiceWorker();
