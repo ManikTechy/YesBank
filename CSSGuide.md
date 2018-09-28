@@ -12,8 +12,6 @@ We write future-standard CSS in a gracefully degrading way by compiling it to pr
 
 - We use [CSS Modules](https://github.com/css-modules/css-modules) to scope all class names and animation names locally.
 - We use [Stylelint](https://stylelint.io) to verify correct structure of styles. Please refer to `.stylelintrc.js` for more information on specific rules. Please install the `stylelint` plugin for your editor of choice.
-- We use [bs-css](https://github.com/SentiaAnalytics/bs-css) when writing css in Reason. `bs-css` is a statically typed interface to [Glamor](https://github.com/threepointone/glamor). The biggest advantage of using `bs-css` is that it allows you to write typesafe css which prevents you from errors from typos and other unwanted css errors.
-
 ## Spacing
 
 - Use soft tabs with a 2 space indent
