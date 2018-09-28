@@ -68,7 +68,7 @@
     },
     "response": {
       "status": 200,
-      "latency": 800,
+      "latency": 10000,
       "headers": {
         "Content-Type": "application/json"
       },
@@ -82,7 +82,7 @@
     },
     "response": {
       "status": 200,
-      "latency": 800,
+      "latency": 10000,
       "query": {
         "duration": "LastSixMonths"
       },

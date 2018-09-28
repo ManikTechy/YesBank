@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Meta from "react-helmet";
-import { fetchPostsIfNeeded, getStats } from "actions";
+import {
+  fetchPostsIfNeeded,
+  getStats,
+  getNewStatas,
+  getOldStats,
+} from "actions";
 import Posts from "components/Posts/Posts";
 import Input from "components/InputText/input";
 import Header from "components/Header/Header";
@@ -46,7 +51,9 @@ export class HomePage extends Component {
 
   componentWillMount() {
     const { dispatch } = this.props;
-    dispatch(getStats());
+    // dispatch(getStats());
+    // dispatch(getNewStatas());
+    // dispatch(getOldStats());
   }
   componentDidMount() {
     const { dispatch } = this.props;

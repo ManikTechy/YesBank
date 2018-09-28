@@ -14,7 +14,7 @@ export const requestPosts = () => ({
 
 export const receivePosts = json => ({
   type: RECEIVE_POSTS,
-  posts: json.data.slice(0, 10).map(child => child) || [],
+  posts: json.slice(0, 10).map(child => child) || [],
   receivedAt: Date.now(),
 });
 
@@ -24,14 +24,23 @@ export const requestPost = () => ({
 
 export const receivePost = json => ({
   type: RECEIVE_POST,
-  posts: json.data[0],
+  posts: json[0],
   receivedAt: Date.now(),
 });
 
-export const fetchPosts = () => ({
-  type: REQUEST_POSTS,
-});
+export function fetchPosts() {
+  return dispatch => {
+    YBApi.get("https://jsonplaceholder.typicode.com/posts", null).then(
+      response => {
+        dispatch(receivePosts(response))
+      },
+      error => {
+        dispatch({ type: types.STATS_FAILURE });
+      }
+    );
+  };
 
+}
 
 const shouldFetchPosts = () => {
   const posts = false;
@@ -45,19 +54,43 @@ const shouldFetchPosts = () => {
 };
 
 export const fetchPostsIfNeeded = () => (dispatch, getState) => {
+  console.log("fetchPostsIfNeeded");
   if (shouldFetchPosts(getState())) {
     dispatch(fetchPosts());
   }
 };
 
 export function getStats() {
-  return async dispatch => {
-    await YBApi.get(
-      Constants.exportURL() + config.endpoint.stats,
-      null
-    ).then(
+  return dispatch => {
+    YBApi.get(Constants.exportURL() + config.endpoint.stats, null).then(
       response => {
         dispatch({ type: types.STATS_SUCCESS, payload: response });
+      },
+      error => {
+        dispatch({ type: types.STATS_FAILURE });
+      }
+    );
+  };
+}
+
+export function getNewStatas() {
+  return dispatch => {
+    YBApi.get(Constants.exportURL() + "/request/linebar", null).then(
+      response => {
+        dispatch({ type: "Manik", payload: response });
+      },
+      error => {
+        dispatch({ type: types.STATS_FAILURE });
+      }
+    );
+  };
+}
+
+export function getOldStats() {
+  return dispatch => {
+    YBApi.get(Constants.exportURL() + "/request/bookmarked", null).then(
+      response => {
+        dispatch({ type: "AYUSH", payload: response });
       },
       error => {
         dispatch({ type: types.STATS_FAILURE });

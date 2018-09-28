@@ -51,8 +51,8 @@ class YBApi {
       requestConfig.params = params;
     }
 
-    http.create();
-    http.defaults.timeout = 2000;
+    // http.create();
+    // http.defaults.timeout = 2000;
 
     if (requestType === "get" || requestType === "delete") {
       return http[requestType](url, requestConfig)
