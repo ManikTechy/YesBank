@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Meta from "react-helmet";
-import { fetchPostsIfNeeded } from "actions";
+import { fetchPostsIfNeeded, getStats } from "actions";
 import Posts from "components/Posts/Posts";
 import Input from "components/InputText/input";
 import Header from "components/Header/Header";
@@ -42,6 +42,11 @@ export class HomePage extends Component {
         },
       ],
     };
+  }
+
+  componentWillMount() {
+    const { dispatch } = this.props;
+    dispatch(getStats());
   }
   componentDidMount() {
     const { dispatch } = this.props;
@@ -83,13 +88,13 @@ export class HomePage extends Component {
           isFetching ? (
             <h3>Loading...</h3>
           ) : (
-            <h4 className="HomePage-message">Empty :(</h4>
-          )
+              <h4 className="HomePage-message">Empty :(</h4>
+            )
         ) : (
-          <div style={{ opacity: isFetching ? 0.5 : 1 }}>
-            <Posts posts={posts} />
-          </div>
-        )}
+            <div style={{ opacity: isFetching ? 0.5 : 1 }}>
+              <Posts posts={posts} />
+            </div>
+          )}
       </div>
     );
   }

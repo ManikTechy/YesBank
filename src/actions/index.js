@@ -1,4 +1,7 @@
-import api from "../lib/api";
+import Constants from "../constants/Constants";
+import * as types from "../constants/authTypes";
+import YBApi from "../lib/api";
+import config from "../lib/config";
 
 export const REQUEST_POSTS = "REQUEST_POSTS";
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
@@ -25,10 +28,10 @@ export const receivePost = json => ({
   receivedAt: Date.now(),
 });
 
-export const fetchPosts = () => dispatch =>
-  api("https://jsonplaceholder.typicode.com/posts").then(json =>
-    dispatch(receivePosts(json))
-  );
+export const fetchPosts = () => ({
+  type: REQUEST_POSTS,
+});
+
 
 const shouldFetchPosts = () => {
   const posts = false;
@@ -46,3 +49,19 @@ export const fetchPostsIfNeeded = () => (dispatch, getState) => {
     dispatch(fetchPosts());
   }
 };
+
+export function getStats() {
+  return async dispatch => {
+    await YBApi.get(
+      Constants.exportURL() + config.endpoint.stats,
+      null
+    ).then(
+      response => {
+        dispatch({ type: types.STATS_SUCCESS, payload: response });
+      },
+      error => {
+        dispatch({ type: types.STATS_FAILURE });
+      }
+    );
+  };
+}
