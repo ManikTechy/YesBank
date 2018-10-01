@@ -17,13 +17,12 @@ module.exports = {
     refmt: "find ./src/SERVICE_NAME/ -name \"*.re\" | xargs -n 1 ./node_modules/bs-platform/lib/refmt.exe --in-place",
     refmtCheck: "bash ./src/jeans/bin/reason-format-check.sh ./src/SERVICE_NAME/",
     fmt:
-      "./node_modules/prettier/bin-prettier.js --write --config .prettierrc './src/SERVICE_NAME/**/*.{js,css,gql}'",
+      "./node_modules/prettier/bin-prettier.js --write --config .prettierrc './src/**/*.{js,css,gql}'",
     fmtCheck:
       "./node_modules/prettier/bin-prettier.js --list-different --config .prettierrc './src/SERVICE_NAME/**/*.{js,css,gql}'",
     generateJeans:
       './node_modules/.bin/babel-node src/jeans/bin/generateJeansFiles.js',
     flow: './node_modules/flow-bin/cli.js check',
   },
-  services: ['booking', 'heart', 'claim', 'mywow'],
   srcFolder: 'src',
 };

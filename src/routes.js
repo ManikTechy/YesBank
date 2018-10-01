@@ -1,8 +1,8 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
-import App from './components/App/App';
-import HomePage from './containers/HomePage/HomePage';
-import PostPage from './components/PostPage/PostPage';
+import React from "react";
+import { Route, IndexRoute } from "react-router";
+import App from "./components/App/App";
+import HomePage from "./containers/HomePage/HomePage";
+import PostPage from "./components/PostPage/PostPage";
 
 export default (
   <Route path="/" component={App}>
