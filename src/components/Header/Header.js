@@ -12,6 +12,7 @@ const Header = () => (
     <ul className="Header-menu">
       <Link to="/">Home</Link>
     </ul>
+    <img src={"img/khana.jpg"} />
   </div>
 );
 

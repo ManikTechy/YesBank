@@ -12,7 +12,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const postcssColorFunction = require("postcss-color-function");
 const postcssCustomMedia = require("postcss-custom-media");
 
-
 module.exports = {
   entry: [
     'webpack-hot-middleware/client',
@@ -26,7 +25,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['public/*']),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoErrorsPlugin(), 
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
@@ -39,6 +38,7 @@ module.exports = {
   },
   module: {
     rules: [
+      
       {
         test: /\.css$/,
         use: [

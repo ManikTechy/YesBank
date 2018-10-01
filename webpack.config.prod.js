@@ -26,10 +26,13 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['public/*']),
+    new CopyWebpackPlugin([
+      {from:'src/img',to:'img'} 
+  ]),
     new HtmlWebpackPlugin({
       title: 'Custom template',
       // Load a custom template (lodash by default see the FAQ for details)
-      template: 'src/index.html'
+      template: 'src/prod.html'
     })
 ,  
 
