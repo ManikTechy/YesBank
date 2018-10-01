@@ -7,10 +7,8 @@ import thunk from "redux-thunk";
 import createLogger from "redux-logger";
 import posts from "./reducers";
 import routes from "./routes";
-const flag = process.env.WEBPACK;
-if (!flag) {
-  const registerServiceWorker = require("./registerServiceWorker"); // eslint-disable-line global-require
-}
+//import registerServiceWorker from "./registerServiceWorker"; // eslint-disable-line global-require
+
 
 //
 
@@ -43,6 +41,6 @@ if (process.env.NODE_ENV === "development" && module.hot) {
     store.replaceReducer(require("./reducers").default); // eslint-disable-line global-require
   });
 }
-if (!flag) {
-  registerServiceWorker();
-}
+
+  //registerServiceWorker();
+
