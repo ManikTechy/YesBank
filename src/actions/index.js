@@ -32,14 +32,13 @@ export function fetchPosts() {
   return dispatch => {
     YBApi.get("https://jsonplaceholder.typicode.com/posts", null).then(
       response => {
-        dispatch(receivePosts(response))
+        dispatch(receivePosts(response));
       },
       error => {
         dispatch({ type: types.STATS_FAILURE });
       }
     );
   };
-
 }
 
 const shouldFetchPosts = () => {
@@ -61,6 +60,7 @@ export const fetchPostsIfNeeded = () => (dispatch, getState) => {
 };
 
 export function getStats() {
+  console.log("CONFIG", process.env);
   return dispatch => {
     YBApi.get(Constants.exportURL() + config.endpoint.stats, null).then(
       response => {
