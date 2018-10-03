@@ -14,8 +14,6 @@ const postcssCustomMedia = require("postcss-custom-media");
 const dotenv = require('dotenv');
 const env = dotenv.config({ path: "./.env" });
 
-console.log(env.parsed.LOCAL);
-
 module.exports = {
     entry: [
         'webpack-hot-middleware/client',
@@ -32,7 +30,11 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify('development'),
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+                DEVELOPMENT: JSON.stringify(process.env.DEVELOPMENT),
+                QA: JSON.stringify(process.env.QA),
+                UAT: JSON.stringify(process.env.UAT),
+                PRODUCTION: JSON.stringify(process.env.PRODUCTION),
                 WEBPACK: true
             }
         })
@@ -112,7 +114,7 @@ module.exports = {
             }
         ]
     },
-    postcss: function() {
+    postcss: function () {
         return [
             postcssImport,
             postcssVars,

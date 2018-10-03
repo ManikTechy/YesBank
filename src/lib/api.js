@@ -14,8 +14,8 @@ class YBApi {
   }
 
   static baseUrl() {
-    const baseUrl = config[process.env.NODE_ENV];
-    return "";
+    const Url = config.DEV; // Here the environemt has to be changed as per requirement
+    return Url;
   }
   static get(route, headers) {
     return this.api("get", route, headers);
