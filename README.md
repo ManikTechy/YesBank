@@ -8,7 +8,7 @@ This is meant as a starter for React projects using tools, patterns and practice
 Then simply clone the repository and install using the `yarn` command.
 
 ```
-git clone https://github.com/ManikTechy/YesBank.git
+git clone https://github.com/xebiaww/yes-genie-app.git
 cd YesBank
 yarn
 ```
