@@ -51,9 +51,9 @@ export class HomePage extends Component {
 
   componentWillMount() {
     const { dispatch } = this.props;
-    // dispatch(getStats());
-    // dispatch(getNewStatas());
-    // dispatch(getOldStats());
+    dispatch(getStats());
+    dispatch(getNewStatas());
+    dispatch(getOldStats());
   }
   componentDidMount() {
     const { dispatch } = this.props;
@@ -95,13 +95,13 @@ export class HomePage extends Component {
           isFetching ? (
             <h3>Loading...</h3>
           ) : (
-              <h4 className="HomePage-message">Empty :(</h4>
-            )
+            <h4 className="HomePage-message">Empty :(</h4>
+          )
         ) : (
-            <div style={{ opacity: isFetching ? 0.5 : 1 }}>
-              <Posts posts={posts} />
-            </div>
-          )}
+          <div style={{ opacity: isFetching ? 0.5 : 1 }}>
+            <Posts posts={posts} />
+          </div>
+        )}
       </div>
     );
   }

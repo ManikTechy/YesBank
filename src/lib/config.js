@@ -1,7 +1,8 @@
 const config = {
-  dev: process.env.LOCAL,
-  stage: process.env.STAGE,
-  prod: process.env.PRODUCTION,
+  DEV: process.env.DEVELOPMENT,
+  QA: process.env.QA,
+  UAT: process.env.UAT,
+  PRODUCTION: process.env.PRODUCTION,
   endpoint: {
     stats: "/request/stats",
   },

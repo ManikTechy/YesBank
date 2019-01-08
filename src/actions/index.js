@@ -32,14 +32,13 @@ export function fetchPosts() {
   return dispatch => {
     YBApi.get("https://jsonplaceholder.typicode.com/posts", null).then(
       response => {
-        dispatch(receivePosts(response))
+        dispatch(receivePosts(response));
       },
       error => {
         dispatch({ type: types.STATS_FAILURE });
       }
     );
   };
-
 }
 
 const shouldFetchPosts = () => {
@@ -62,7 +61,7 @@ export const fetchPostsIfNeeded = () => (dispatch, getState) => {
 
 export function getStats() {
   return dispatch => {
-    YBApi.get(Constants.exportURL() + config.endpoint.stats, null).then(
+    YBApi.get(config.endpoint.stats, null).then(
       response => {
         dispatch({ type: types.STATS_SUCCESS, payload: response });
       },
@@ -75,7 +74,7 @@ export function getStats() {
 
 export function getNewStatas() {
   return dispatch => {
-    YBApi.get(Constants.exportURL() + "/request/linebar", null).then(
+    YBApi.get("/request/linebar", null).then(
       response => {
         dispatch({ type: "Manik", payload: response });
       },
@@ -88,7 +87,7 @@ export function getNewStatas() {
 
 export function getOldStats() {
   return dispatch => {
-    YBApi.get(Constants.exportURL() + "/request/bookmarked", null).then(
+    YBApi.get("/request/bookmarked", null).then(
       response => {
         dispatch({ type: "AYUSH", payload: response });
       },
